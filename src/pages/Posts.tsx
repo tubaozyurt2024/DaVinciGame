@@ -91,7 +91,7 @@ export default function Posts() {
         ))}
       </Grid>
       <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-        <Pagination count={totalPages} page={page} onChange={(e, p) => setPage(p)} />
+        <Pagination count={totalPages} page={page} onChange={( _,p) => setPage(p)} />
       </Box>
 
       {/* Modal */}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TextField, Button, Stack } from "@mui/material";
 
-import type { Field, GenericFormProps } from "../types/form";
+import type { GenericFormProps } from "../types/form";
 
 function GenericForm<T extends Record<string, any>>({
   initialData,
