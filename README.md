@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# React Posts & Users App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed as part of a technical assessment to demonstrate **frontend development skills with React and TypeScript**.  
+It integrates with the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) to display and manage posts and users.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- Fetch and display **Posts** and **Users** from API  
+- **Add / Edit / Delete** functionality for posts and users  
+- Posts are linked to their authors (e.g., *User: Ali*)  
+- **Reusable form component** for both posts and users  
+- **Pagination** support for posts  
+- Built with **Material-UI** for modern UI design  
+- Custom React hook (`useFetch`) for clean data fetching  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
+- **React (Vite) + TypeScript**  
+- **Material-UI (MUI)**  
+- **Axios** for API requests  
+- **React Router** for navigation  
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+src/
+├── components/ # Reusable UI components
+│ ├── GenericForm.tsx
+│ ├── PostCard.tsx
+│ └── UserRow.tsx
+│
+├── hooks/ # Custom hooks
+│ └── useFetch.ts
+│
+├── pages/ # Pages
+│ ├── Posts.tsx
+│ └── Users.tsx
+│
+├── services/ # API services
+│ ├── postService.ts
+│ └── userService.ts
+│
+├── types/ # TypeScript types
+│ ├── post.ts
+│ └── user.ts
+│
+├── App.tsx # Routes and navigation
+└── main.tsx # Entry point
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚡ Getting Started
+```bash
+# Install dependencies
+npm install
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Run the app
+npm run dev
+
+
+## 📂 Project Structure
