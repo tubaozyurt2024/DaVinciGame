@@ -23,34 +23,6 @@ It integrates with the [JSONPlaceholder API](https://jsonplaceholder.typicode.co
 - **React Router** for navigation  
 
 ---
-## 📂 Project Structure
-
-src/
-├── components/ # Reusable UI components
-│ ├── GenericForm.tsx
-│ ├── PostCard.tsx
-│ └── UserRow.tsx
-│
-├── hooks/ # Custom hooks
-│ └── useFetch.ts
-│
-├── pages/ # Pages
-│ ├── Posts.tsx
-│ └── Users.tsx
-│
-├── services/ # API services
-│ ├── postService.ts
-│ └── userService.ts
-│
-├── types/ # TypeScript types
-│ ├── post.ts
-│ └── user.ts
-│
-├── App.tsx # Routes and navigation
-└── main.tsx # Entry point
-
-
----
 
 ## ⚡ Getting Started
 ```bash
@@ -60,5 +32,3 @@ npm install
 # Run the app
 npm run dev
 
-
-## 📂 Project Structure
